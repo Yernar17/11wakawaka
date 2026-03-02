@@ -20,7 +20,7 @@ body {
 .photo{
     width: 250px;
     height: 300px;
-    padding-left: 36px;
+    padding-left: 28px;
     border-radius: 7%;
 }
 
@@ -35,8 +35,8 @@ body {
     transition: background 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     position: absolute;
-    top: 400px;
-    right: 180px;
+    top: 370px;
+    right: 170px;
 }
 
 .kr{
