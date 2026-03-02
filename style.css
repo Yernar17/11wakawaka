@@ -20,7 +20,7 @@ body {
 .photo{
     width: 250px;
     height: 300px;
-    padding-left: 42px;
+    padding-left: 36px;
     border-radius: 7%;
 }
 
@@ -35,7 +35,7 @@ body {
     transition: background 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     position: absolute;
-    top: 415px;
+    top: 400px;
     right: 180px;
 }
 
@@ -91,7 +91,7 @@ body {
 .heart-shape {
   position: absolute;
   top: 50%;
-  left: -75%;
+  left: -70%;
   transform: translate(-50%, -55%);
   width: 35px;
   height: 35px;
