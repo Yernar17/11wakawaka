@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 waka waka</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ok">
+        <h1 class="t1" data-aos="fade-down">11 waka waka</h1>
+        
+        <img class="photo" src="photo.png" alt="" data-aos="zoom-in" data-aos-delay="300">
+
+        <audio id="myAudio">
+            <source src="muz.m4a" type="audio/mpeg">
+        </audio>
+
+        <button id="playBtn" class="music-button" data-aos="flip-left" data-aos-delay="500">▶</button>
+
+        <h1 class="kr" data-aos="fade-up">Құрметті қыздар</h1>
+        <p class="t2" data-aos="fade-up" data-aos-delay="200">Сіздерді 8 наурыз халықаралық әйелдер күнімен құттықтаймыз!</p>
+
+        <div class="calendar-widget" data-aos="fade-up" data-aos-delay="400">
+             <div class="days-header">
+                <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+            </div>
+            <div class="days-grid">
+                <span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+                <div class="marked-day">
+                    <span class="day-number">7</span>
+                    <div class="heart-shape"></div>
+                    <div class="month-label">Наурыз</div>
+                </div>
+                <span>8</span>
+            </div>
+        </div>      
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Анимацияны іске қосу
+        AOS.init({
+            duration: 1000, // Анимация жылдамдығы (1 секунд)
+            once: true // Тек бір рет ойналуы үшін
+        });
+
+        const audio = document.getElementById('myAudio');
+        const btn = document.getElementById('playBtn');
+
+        btn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = '❚❚'; 
+            } else {
+                audio.pause();
+                btn.innerHTML = '▶';
+            }
+        });
+    </script>
+</body>
+</html>
