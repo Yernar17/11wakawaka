@@ -6,6 +6,25 @@
     <title>11 waka waka</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Скролл тегіс болуы үшін */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Элементтер арасында арақашықтық болуы үшін (тексеруге ыңғайлы) */
+        .ok > * {
+            margin-bottom: 50px;
+        }
+        .whatsapp {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="ok">
@@ -22,7 +41,7 @@
         <h1 class="kr" data-aos="fade-up">Құрметті қыздар</h1>
         <p class="t2" data-aos="fade-up" data-aos-delay="200">Сіздерді 8 наурыз халықаралық әйелдер күнімен құттықтаймыз!</p>
 
-        <div class="calendar-widget" data-aos="fade-up" data-aos-delay="400">
+        <div class="calendar-widget" data-aos="fade-right" data-aos-delay="300">
              <div class="days-header">
                 <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
             </div>
@@ -35,15 +54,51 @@
                 </div>
                 <span>8</span>
             </div>
-        </div>      
+        </div>
+
+        <h1 class="kr" data-aos="fade-up" data-aos-duration="1200">8 наурыз</h1>
+        
+        <p class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+            8 наурыз – нәзіктік пен сұлулықтың мерекесі. Әрбір әйел адам үшін бұл күн ерекше өтуі тиіс. 
+            Сондықтан сіздердің де мерекелеріңіз шаттыққа, қуанышқа және жылы лебіздерге толы болсын. 
+            Әрдайым бақытты болып, өмірлеріңіз гүлдей жайнай берсін!
+            Сіздерге арнайлап квест ұйымдастырдық. Толығырақ WhatsApp қосымшасында.
+        </p>
+
+        <a class="whatsapp" href="https://chat.whatsapp.com/HJyDgxfcMU5JBHFoLi5CNN?mode=hq1tcli" 
+           data-aos="zoom-in" 
+           data-aos-anchor-placement="top-bottom">
+           Группаға қосылу
+        </a>
+
+        <div class="photos">
+    <img src="bir.jpg" alt="Photo 1" 
+         data-aos="fade-up" 
+         data-aos-delay="100">
+         
+    <img src="eki.jpg" alt="Photo 2" 
+         data-aos="fade-up" 
+         data-aos-delay="300">
+         
+    <img src="ush.jpg" alt="Photo 3" 
+         data-aos="fade-up" 
+         data-aos-delay="500">
+         
+    <img src="tort.jpg" alt="Photo 4" 
+         data-aos="fade-up" 
+         data-aos-delay="700">
+</div>
+
+<p class="t2">Алдын жолы ренжіткеніміз үшін кешірім сұраймыз. Пранк жасаған болатынбыз. Квестте сәттілік</p>
     </div>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Анимацияны іске қосу
+        // Анимацияны баптау
         AOS.init({
-            duration: 1000, // Анимация жылдамдығы (1 секунд)
-            once: true // Тек бір рет ойналуы үшін
+            duration: 1000, // Анимацияның ұзақтығы (1 сек)
+            once: false,    // scroll жасағанда қайта-қайта ойналуы үшін (true қылсаңыз тек 1 рет)
+            mirror: true    // жоғарыға скролл жасағанда да анимация жұмыс істейді
         });
 
         const audio = document.getElementById('myAudio');

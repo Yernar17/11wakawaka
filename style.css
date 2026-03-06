@@ -3,7 +3,7 @@ body {
 }
 .ok{
     background: white;
-    padding-bottom: 1000px;
+    padding-bottom: 70px;
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -91,7 +91,7 @@ body {
 .heart-shape {
   position: absolute;
   top: 50%;
-  left: -70%;
+  left: 156%;
   transform: translate(-50%, -55%);
   width: 35px;
   height: 35px;
@@ -105,7 +105,7 @@ body {
   content: '';
   position: absolute;
   top: 25px;
-  left: -75%;
+  left: 160%;
   width: 1px;
   height: 60px;
   background-color: var(--main-color);
@@ -115,11 +115,54 @@ body {
 .month-label {
   position: absolute;
   top: 70px;
-  left: -60%;
+  left: 150%;
   transform: translateX(-50%) rotate(-10deg);
   font-family: 'Cursive', brush script mt, sans-serif;
   color: var(--main-color);
   font-size: 1.5rem;
   white-space: nowrap;
   color: rgb(144, 0, 0);
+}
+
+.whatsapp{
+  text-decoration: none;
+  color: green;
+  font-size: 20px;
+  margin-left: 120px;
+}
+
+.whatsapp:hover{
+  color: rgb(0, 101, 7);
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.2);
+  transition: .4s;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Телефонда 2 қатар */
+    gap: 15px; /* Суреттер арасындағы қашықтық */
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.photos img {
+    width: 100%;
+    height: 250px; /* Суреттердің биіктігі бірдей болуы үшін */
+    object-fit: cover; /* Сурет созылып кетпеуі үшін */
+    border-radius: 15px; /* Бұрыштарын дөңгелету */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Жеңіл көлеңке */
+    transition: transform 0.3s ease;
+}
+
+/* Компьютер немесе планшет үшін (экран үлкен болса 4 баған) */
+@media (min-width: 768px) {
+    .photos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Суретті басқанда аздап үлкейту эффектісі */
+.photos img:hover {
+    transform: scale(1.05);
 }
